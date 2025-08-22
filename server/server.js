@@ -54,13 +54,6 @@ app.use("/api/messages", messageRouter)
 
 
 
-// Root route to respond to GET /
-app.get("/", (req, res) => {
-  res.send("Welcome to the API");
-});
-
-
-
 //connect to mongo DB 
 await connectDB();
 
@@ -73,4 +66,4 @@ if(process.env.NODE_ENV !== "production"){
 
 
 //exporting the server for vercel
-export default server
+export default server;
