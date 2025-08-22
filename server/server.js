@@ -53,6 +53,14 @@ app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter)
 
 
+
+// Root route to respond to GET /
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
+
+
+
 //connect to mongo DB 
 await connectDB();
 
